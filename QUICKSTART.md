@@ -16,9 +16,16 @@ pip install -r requirements.txt
 python scripts/generate_sample_data.py --num-rows 5000 --with-features
 ```
 
-### 3. **Train Models** (using sample data)
+### 3. **Train Models** (Enhanced with PyTorch Deep Learning)
 ```bash
+# Quick training with sample data
 python scripts/train_models_sample.py
+
+# Enhanced training with PyTorch deep learning
+python scripts/train_models_enhanced.py --use-deep-learning --quick
+
+# Full training with all features (Apple Silicon optimized)
+python scripts/train_models_enhanced.py --full --use-deep-learning --use-ensemble
 ```
 
 ### 4. **Run Streamlit Dashboard**
@@ -42,12 +49,19 @@ docker-compose up --build
 
 ### ✅ **Working Components**
 
-**🎨 Streamlit Dashboard** (5 pages)
+**🎨 Streamlit Dashboard** (6 pages)
 - 📊 Data Overview: Load and explore datasets
 - 📈 Risk Analysis: Temporal and environmental patterns  
 - 🗺️ Geographic Analysis: Interactive maps and hotspots
 - 🤖 Risk Prediction: Real-time risk assessment
 - 📉 Model Performance: ML metrics and evaluation
+- 🚀 Model Training: Real-time training with PyTorch deep learning
+
+**🧠 PyTorch Deep Learning Integration**
+- Apple Silicon optimized with MPS acceleration
+- 5 neural network architectures (Simple, Deep, Wide, Residual, Attention)
+- Process management to prevent orphaned workers
+- Real-time training monitoring with progress tracking
 
 **🔌 FastAPI Backend**
 - `/api/v1/predict` - Single risk prediction
@@ -58,9 +72,16 @@ docker-compose up --build
 
 **🛠️ Scripts & Tools**
 - Data download and processing
-- Model training pipeline
+- Enhanced ML training pipeline with PyTorch
+- Process monitoring and orphaned worker cleanup
 - Comprehensive test suite
 - Docker deployment ready
+
+**🛡️ Process Management System**
+- Automatic cleanup of orphaned training processes
+- Background monitoring with CPU/memory tracking  
+- Emergency cleanup utilities
+- Apple Silicon performance optimization
 
 ### ⚠️ **Expected Behavior**
 - **"Model artifacts not found"** warning is normal - system works without trained models
@@ -97,6 +118,25 @@ export PYTHONPATH=$PWD:$PYTHONPATH
 ```bash
 # Use smaller data samples
 python scripts/download_data.py --limit-rows 100
+```
+
+**Orphaned training processes (high CPU usage):**
+```bash
+# Clean up orphaned processes immediately
+python scripts/monitor_processes.py --cleanup
+
+# Monitor training processes in real-time
+python scripts/monitor_processes.py --monitor --duration 60
+
+# Use Streamlit cleanup button in Model Training page
+# Click "🧹 Cleanup Processes" button
+```
+
+**Training appears stuck:**
+```bash
+# Emergency cleanup and status reset
+python scripts/monitor_processes.py --cleanup
+streamlit run app/streamlit_app.py  # Restart interface
 ```
 
 ## 🏆 Success Indicators

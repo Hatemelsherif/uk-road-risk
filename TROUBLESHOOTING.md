@@ -1,5 +1,29 @@
 # 🔧 Troubleshooting Guide
 
+## 🚨 **Critical Issues & Solutions**
+
+### ⚠️ **Orphaned Process Issues - SOLVED**
+
+**Problem**: Training processes create orphaned joblib workers consuming 60-99% CPU each, causing system slowdown and incorrect status display.
+
+**✅ Solution Implemented:**
+```bash
+# Clean up orphaned processes
+python scripts/monitor_processes.py --cleanup
+
+# Monitor processes in real-time
+python scripts/monitor_processes.py --monitor --duration 60
+
+# Use Streamlit cleanup button
+# Click "🧹 Cleanup Processes" in Model Training page
+```
+
+**Prevention**: Process management system now automatically prevents orphaned workers with:
+- Automatic cleanup on script termination
+- Limited workers (4 max) to prevent explosion
+- Background monitoring for stuck processes
+- Emergency cleanup utilities
+
 ## ✅ **Kaggle Download Issue - SOLVED**
 
 ### Problem:

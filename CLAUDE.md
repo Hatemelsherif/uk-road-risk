@@ -14,6 +14,10 @@ The project follows a modern microservices architecture with the following compo
 - **data_loader.py**: Handles data acquisition from Kaggle and preprocessing
 - **feature_engineering.py**: Creates comprehensive risk features and target variables
 - **model_training.py**: Trains multiple ML models (Random Forest, Gradient Boosting, Logistic Regression)
+- **model_training_improved.py**: Enhanced ML training with ensemble methods and hyperparameter tuning
+- **pytorch_deep_learning.py**: PyTorch-based deep learning with Apple Silicon MPS optimization
+- **process_manager.py**: Orphaned process prevention and monitoring system
+- **training_monitor.py**: Real-time training progress monitoring
 - **risk_predictor.py**: Provides real-time prediction capabilities for new data
 - **visualization.py**: Creates interactive visualizations using Plotly
 
@@ -30,6 +34,7 @@ The project follows a modern microservices architecture with the following compo
   - 3_🗺️_Geographic_Analysis.py: Interactive maps and regional statistics
   - 4_🤖_Risk_Prediction.py: Real-time risk assessment interface
   - 5_📉_Model_Performance.py: Model evaluation and metrics
+  - 6_🚀_Model_Training.py: Real-time training interface with PyTorch and process management
 - **utils.py**: Shared utilities and helper functions
 
 ### Configuration (`config/`)
@@ -54,11 +59,17 @@ cp .env.example .env
 
 ### Data Processing
 ```bash
-# Download and process data
+# Generate sample data (recommended)
+python scripts/generate_sample_data.py --num-rows 5000 --with-features
+
+# Download and process data (if Kaggle available)
 python scripts/download_data.py --limit-rows 10000
 
-# Train models
-python scripts/train_models.py --limit-rows 10000
+# Train models with PyTorch deep learning
+python scripts/train_models_enhanced.py --use-deep-learning --quick
+
+# Full training with ensemble methods
+python scripts/train_models_enhanced.py --full --use-ensemble --use-deep-learning
 ```
 
 ### Running Applications
@@ -105,10 +116,11 @@ docker build -t uk-road-risk .
 
 ### Machine Learning
 - **Risk Classification**: High/Medium/Low risk levels based on accident severity
-- **Feature Engineering**: 17 engineered features including environmental, temporal, and vehicle factors
-- **Multiple Models**: Random Forest (best: 89% accuracy), Gradient Boosting, Logistic Regression
-- **Clustering Analysis**: K-Means, Hierarchical, and DBSCAN for pattern discovery
-- **Model Evaluation**: Comprehensive metrics with cross-validation
+- **Feature Engineering**: 17+ engineered features including environmental, temporal, and vehicle factors
+- **Multiple Models**: Stacking Ensemble (best: 87.72% accuracy), Random Forest, XGBoost, LightGBM, CatBoost
+- **PyTorch Deep Learning**: 5 neural network architectures optimized for Apple Silicon MPS
+- **Process Management**: Comprehensive orphaned worker prevention and monitoring
+- **Model Evaluation**: Comprehensive metrics with cross-validation and ensemble methods
 
 ### Web Applications
 - **Multi-page Streamlit dashboard** with navigation and session state
@@ -163,7 +175,10 @@ data/
 - **Stratified sampling** for balanced train/test splits
 - **Cross-validation** for robust performance evaluation
 - **Feature scaling** with StandardScaler
-- **Model comparison** across multiple algorithms
+- **Model comparison** across multiple algorithms including deep learning
+- **Process safety** with automatic cleanup of training workers
+- **Apple Silicon optimization** using PyTorch MPS backend
+- **Real-time monitoring** with progress tracking and safe interruption
 - **Feature importance analysis** for interpretability
 
 ### API Development
@@ -207,16 +222,23 @@ data/
 
 ### Common Issues
 - **Import errors**: Ensure PYTHONPATH includes project root
-- **Data loading failures**: Check Kaggle API credentials
+- **Data loading failures**: Check Kaggle API credentials or use sample data generation
 - **Memory issues**: Use data limiting parameters
 - **Port conflicts**: Check Docker port mappings
 - **Model loading errors**: Verify model artifacts exist
+- **Orphaned processes**: Use `python scripts/monitor_processes.py --cleanup`
+- **Training hangs**: TensorFlow replaced with PyTorch for Apple Silicon compatibility
+- **High CPU usage**: Check for joblib workers with process monitor
 
 ### Development Tips
-- **Use limiting parameters** during development (`--limit-rows`)
+- **Use limiting parameters** during development (`--limit-rows`, `--quick`)
 - **Check logs** in `app.log` for debugging
 - **Test API endpoints** with `/docs` interface
 - **Monitor Docker logs** with `docker-compose logs -f`
 - **Use pytest fixtures** for consistent test data
+- **Monitor training processes** with `python scripts/monitor_processes.py --monitor`
+- **Clean up orphaned workers** regularly during development
+- **Use PyTorch for deep learning** instead of TensorFlow on Apple Silicon
+- **Leverage MPS acceleration** for fastest training on M1/M2/M3 Macs
 
 This modular architecture provides a solid foundation for scaling, maintenance, and deployment of the UK Road Risk Classification System.
