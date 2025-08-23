@@ -1,0 +1,24 @@
+{
+  "total_records": 0,
+  "total_features": 71,
+  "risk_distribution": {},
+  "feature_columns": [
+    "Number_of_Vehicles",
+    "Number_of_Casualties",
+    "Speed_limit",
+    "Hour",
+    "Day_of_Week",
+    "Month",
+    "Is_Weekend",
+    "Is_Rush_Hour",
+    "Weather_Risk_Score",
+    "Road_Risk_Score",
+    "Light_Risk_Score",
+    "Environmental_Risk",
+    "Vehicle_Age",
+    "Is_Old_Vehicle",
+    "Location_Accident_Count",
+    "Junction_Risk",
+    "Urban_or_Rural_Area"
+  ]
+}

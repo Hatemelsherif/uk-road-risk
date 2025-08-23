@@ -1,0 +1,234 @@
+{
+  "configuration": {
+    "balance_method": "smote",
+    "feature_selection": "mutual_info",
+    "tune_hyperparameters": false,
+    "use_ensemble": false,
+    "use_gpu": true,
+    "data_samples": 5568,
+    "num_features": 17
+  },
+  "results": {
+    "Random Forest": {
+      "accuracy": 0.8716337522441652,
+      "f1_score": 0.8388856233336502,
+      "balanced_accuracy": 0.4437737757547771,
+      "precision": 0.8289404593201316,
+      "recall": 0.8716337522441652,
+      "cohen_kappa": 0.14062685439930944,
+      "matthews_corrcoef": 0.1732238853999193,
+      "roc_auc": 0.6904705767711714
+    },
+    "Extra Trees": {
+      "accuracy": 0.8626570915619389,
+      "f1_score": 0.8373330232579236,
+      "balanced_accuracy": 0.4497548211183675,
+      "precision": 0.8253531464556908,
+      "recall": 0.8626570915619389,
+      "cohen_kappa": 0.1504660319992025,
+      "matthews_corrcoef": 0.16738325093462691,
+      "roc_auc": 0.7046014609663778
+    },
+    "Gradient Boosting": {
+      "accuracy": 0.8761220825852782,
+      "f1_score": 0.8364941743892321,
+      "balanced_accuracy": 0.3835620203619412,
+      "precision": 0.838332384517089,
+      "recall": 0.8761220825852782,
+      "cohen_kappa": 0.11406936136371493,
+      "matthews_corrcoef": 0.16321406205884162,
+      "roc_auc": 0.6432582676681496
+    },
+    "AdaBoost": {
+      "accuracy": 0.7549371633752244,
+      "f1_score": 0.7756561582207167,
+      "balanced_accuracy": 0.3908074411240847,
+      "precision": 0.7988661314121254,
+      "recall": 0.7549371633752244,
+      "cohen_kappa": 0.0628847872307644,
+      "matthews_corrcoef": 0.06431609822001957,
+      "roc_auc": 0.5701652983946369
+    },
+    "Logistic Regression": {
+      "accuracy": 0.5798922800718133,
+      "f1_score": 0.6670276076349477,
+      "balanced_accuracy": 0.4716505046507025,
+      "precision": 0.811364836150464,
+      "recall": 0.5798922800718133,
+      "cohen_kappa": 0.06359988648650583,
+      "matthews_corrcoef": 0.08184688847302339,
+      "roc_auc": 0.584438359406144
+    },
+    "SVM": {
+      "accuracy": 0.6463195691202872,
+      "f1_score": 0.7113808690424398,
+      "balanced_accuracy": 0.5273874705895287,
+      "precision": 0.8191736855908268,
+      "recall": 0.6463195691202872,
+      "cohen_kappa": 0.10664506464324086,
+      "matthews_corrcoef": 0.1283456513121145,
+      "roc_auc": 0.6084217468702127
+    },
+    "Neural Network": {
+      "accuracy": 0.7980251346499102,
+      "f1_score": 0.8036276408294143,
+      "balanced_accuracy": 0.4557303691976164,
+      "precision": 0.8096173608016136,
+      "recall": 0.7980251346499102,
+      "cohen_kappa": 0.12188815941592335,
+      "matthews_corrcoef": 0.12222353344668702,
+      "roc_auc": 0.5960881460500417
+    },
+    "XGBoost": {
+      "accuracy": 0.8635547576301615,
+      "f1_score": 0.8439320346806618,
+      "balanced_accuracy": 0.46652703564439163,
+      "precision": 0.8333849233372542,
+      "recall": 0.8635547576301615,
+      "cohen_kappa": 0.20111721300647312,
+      "matthews_corrcoef": 0.21442380165438185,
+      "roc_auc": 0.6437100422133718
+    },
+    "LightGBM": {
+      "accuracy": 0.8779174147217235,
+      "f1_score": 0.8472754316458753,
+      "balanced_accuracy": 0.4555489588143457,
+      "precision": 0.8441370871488321,
+      "recall": 0.8779174147217235,
+      "cohen_kappa": 0.18693113515370074,
+      "matthews_corrcoef": 0.2285771902622694,
+      "roc_auc": 0.6593701877583418
+    },
+    "CatBoost": {
+      "accuracy": 0.874326750448833,
+      "f1_score": 0.8440757884433495,
+      "balanced_accuracy": 0.45183829188380936,
+      "precision": 0.8363504943925264,
+      "recall": 0.874326750448833,
+      "cohen_kappa": 0.17436923630742518,
+      "matthews_corrcoef": 0.20875617543865746,
+      "roc_auc": 0.6291329868859594
+    },
+    "PyTorch_Simple_Network": {
+      "accuracy": 0.7531418312387792,
+      "f1_score": 0.7774854494378303,
+      "balanced_accuracy": 0.7531418312387792,
+      "precision": 0.7774854494378303,
+      "recall": 0.7774854494378303,
+      "cohen_kappa": 0.0,
+      "matthews_corrcoef": 0.0,
+      "roc_auc": null
+    },
+    "PyTorch_Deep_Network": {
+      "accuracy": 0.7989228007181328,
+      "f1_score": 0.8065008767013205,
+      "balanced_accuracy": 0.7989228007181328,
+      "precision": 0.8065008767013205,
+      "recall": 0.8065008767013205,
+      "cohen_kappa": 0.0,
+      "matthews_corrcoef": 0.0,
+      "roc_auc": null
+    },
+    "PyTorch_Wide_Network": {
+      "accuracy": 0.7899461400359067,
+      "f1_score": 0.8020721956179686,
+      "balanced_accuracy": 0.7899461400359067,
+      "precision": 0.8020721956179686,
+      "recall": 0.8020721956179686,
+      "cohen_kappa": 0.0,
+      "matthews_corrcoef": 0.0,
+      "roc_auc": null
+    },
+    "PyTorch_Residual_Network": {
+      "accuracy": 0.7163375224416517,
+      "f1_score": 0.7546997362143228,
+      "balanced_accuracy": 0.7163375224416517,
+      "precision": 0.7546997362143228,
+      "recall": 0.7546997362143228,
+      "cohen_kappa": 0.0,
+      "matthews_corrcoef": 0.0,
+      "roc_auc": null
+    },
+    "PyTorch_Attention_Network": {
+      "accuracy": 0.6068222621184919,
+      "f1_score": 0.6753830583865359,
+      "balanced_accuracy": 0.6068222621184919,
+      "precision": 0.6753830583865359,
+      "recall": 0.6753830583865359,
+      "cohen_kappa": 0.0,
+      "matthews_corrcoef": 0.0,
+      "roc_auc": null
+    }
+  },
+  "best_model": "LightGBM",
+  "feature_importance": [
+    {
+      "feature": "Hour",
+      "importance": 3424
+    },
+    {
+      "feature": "Month",
+      "importance": 3016
+    },
+    {
+      "feature": "Vehicle_Age",
+      "importance": 2598
+    },
+    {
+      "feature": "Day_of_Week",
+      "importance": 2137
+    },
+    {
+      "feature": "Number_of_Vehicles",
+      "importance": 1401
+    },
+    {
+      "feature": "Number_of_Casualties",
+      "importance": 1350
+    },
+    {
+      "feature": "Speed_limit",
+      "importance": 925
+    },
+    {
+      "feature": "Location_Accident_Count",
+      "importance": 923
+    },
+    {
+      "feature": "Is_Rush_Hour",
+      "importance": 669
+    },
+    {
+      "feature": "Urban_or_Rural_Area",
+      "importance": 603
+    },
+    {
+      "feature": "Is_Old_Vehicle",
+      "importance": 490
+    },
+    {
+      "feature": "Is_Weekend",
+      "importance": 464
+    },
+    {
+      "feature": "Light_Risk_Score",
+      "importance": 0
+    },
+    {
+      "feature": "Environmental_Risk",
+      "importance": 0
+    },
+    {
+      "feature": "Road_Risk_Score",
+      "importance": 0
+    },
+    {
+      "feature": "Junction_Risk",
+      "importance": 0
+    },
+    {
+      "feature": "Weather_Risk_Score",
+      "importance": 0
+    }
+  ]
+}

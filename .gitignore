@@ -1,0 +1,166 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Virtual environments
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# Data files (exclude large datasets but keep structure)
+data/raw/*.csv
+data/processed/*.csv
+data/models/model_v_*/
+data/models/*.pkl
+data/models/*.joblib
+*.pkl
+*.joblib
+
+# Keep important model files
+!data/models/README.md
+!data/models/training_status.json
+
+# Logs
+*.log
+logs/
+app.log
+
+# OS
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Database
+*.db
+*.sqlite
+*.sqlite3
+
+# Model files (large)
+models/*.pkl
+models/*.joblib
+*.model
+
+# Temporary files
+tmp/
+temp/
+.tmp/
+
+# Docker
+.dockerignore
+
+# Streamlit
+.streamlit/
+
+# FastAPI
+.pytest_cache/
+
+# Coverage
+htmlcov/
+.coverage
+.coverage.*
+coverage.xml
+*.cover
+.hypothesis/
+
+# Environment variables
+.env.local
+.env.development
+.env.test
+.env.production
+
+# Cache
+.cache/
+*.cache
+
+# PyTorch and ML models
+*.pth
+*.pt
+*.onnx
+*.h5
+*.hdf5
+
+# Training artifacts
+checkpoints/
+wandb/
+tensorboard/
+mlruns/
+
+# Process monitoring
+*.pid
+process_monitor.log
+
+# Backup files
+*.bak
+*.swp
+*.tmp
+
+# macOS specific
+.Trashes
+.fseventsd
+
+# Security - never commit secrets
+secrets/
+*.key
+*.pem
+kaggle.json
+.kaggle/
+
+# Development tools
+.mypy_cache/
+.pytest_cache/
+.ruff_cache/
+
+# Large files (use Git LFS if needed)
+*.zip
+*.tar.gz
+*.tar.bz2
+
+# Node.js (if using any JS tools)
+node_modules/
+package-lock.json
+
+# Python package files
+*.whl
+*.egg-info/
+
+# Documentation build
+docs/_build/
+site/
