@@ -12,6 +12,11 @@ xgboost>=2.0.0  # Gradient boosting
 lightgbm>=4.0.0  # Fast gradient boosting
 catboost>=1.2  # Categorical features support
 
+# Deep Learning (PyTorch)
+torch>=2.0.0  # PyTorch for deep learning with Apple Silicon MPS support
+torchvision>=0.15.0  # Computer vision utilities (if needed)
+torchaudio>=2.0.0  # Audio processing utilities (if needed)
+
 # Data visualization
 plotly>=5.15.0
 matplotlib>=3.5.0
@@ -47,6 +52,7 @@ folium>=0.14.0
 
 # Logging and monitoring
 loguru>=0.7.0
+psutil>=5.9.0  # Process monitoring and management
 
 # Image processing (optional)
 Pillow>=10.0.0

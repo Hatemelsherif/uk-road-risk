@@ -139,7 +139,10 @@ LOGGING_CONFIG = {
             "class": "logging.FileHandler",
             "filename": str(PROJECT_ROOT / "app.log"),
         }
-    ]
+    ],
+    "root": {
+        "level": "INFO"
+    }
 }
 
 # Environment-specific overrides

@@ -122,6 +122,7 @@ checkpoints/
 wandb/
 tensorboard/
 mlruns/
+training_report_*.json
 
 # Process monitoring
 *.pid
@@ -152,6 +153,10 @@ kaggle.json
 *.zip
 *.tar.gz
 *.tar.bz2
+
+# Data management and cleanup
+backups/
+cleanup_report_*.json
 
 # Node.js (if using any JS tools)
 node_modules/
